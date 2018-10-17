@@ -1,0 +1,3 @@
+[run]
+source = inf551
+omit = inf551/test*
