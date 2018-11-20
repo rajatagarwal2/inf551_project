@@ -24,7 +24,7 @@ nav.main-navigation ul.nav-list {
     padding: 0;
     list-style: none;
     position: relative;
-    text-align: right;
+    background: black;
 }
 
 .nav-list li.nav-list-item {
@@ -41,7 +41,7 @@ a.nav-link {
     font-weight: 500;
     cursor: pointer;
     position: relative;
-    color: #404040;
+    color: white;
 }
 
 @keyframes FadeIn {
@@ -91,7 +91,11 @@ a.nav-link {
 }
 
 #nav_image{
-    width: 39%;
+    width: 77px;;
+}
+
+#pDebug{
+    display: none;
 }
 
 
