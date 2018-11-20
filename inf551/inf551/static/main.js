@@ -2,19 +2,25 @@ $(document).ready(function(){
 	$('#search_button').click(function(){
 		search_key = $("#search_key").val();
 		if(search_key.length == 0){
-			$(".alert").toggleClass('fade ""'); 
+			$(".alert").removeClass('fade');
 		}
 		else{ 
 			$.ajax({
-	         url: "/search",
-	         type: "POST",
-	         contentType: "application/json; charset=utf-8",
-	         data: JSON.stringify({"key": search_key}),
+	         url: "/search?key=" + search_key,
+	         type: "GET",
 	         success: function(result) {
 	            if(result.api_success){
-	               // alertWindowFn('success', 'topCenter', '<b>' + result.msg + '</b>');
+	            	if(result.count == 0){
+	            		$("#alert_msg").text("No Result Found")
+	              		$(".alert").removeClass('fade');
+	            	}
+	            	else{
+	            		$("#alert_msg").text(result.msg)
+	              		$(".alert").removeClass('fade');
+	            	}
 	            }else{
-	              // alertWindowFn('error', 'topCenter', '<b>' + result.msg + '</b>');
+	              $("#alert_msg").text(result.msg)
+	              $(".alert").removeClass('fade');
 	            }
 	         },
 	         error: function(xhr, ajaxOptions, thrownError) {
@@ -26,6 +32,6 @@ $(document).ready(function(){
 	});
 
 	$('.alert_close').click(function(){
-		$(".alert").toggleClass('fade ""');
+		$(".alert").addClass('fade');
 	});
 });
