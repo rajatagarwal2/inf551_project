@@ -29,6 +29,7 @@ $(document).ready(function(){
                       						'<h3>' + song.TITLE + '</h3>' +
                       						'<h4>By ' + song.ARTIST + '</h4>' +
                       						'<h6>' + song.TITLE + ' composed by '+ song.COMPOSER + ' from the album ' + song.ALBUM +'.</h6>' +
+                      						'<h6>Download: <a target="_blank" href="' + song.URL + '">'+ song.TITLE +'</a></h6>' +
                       						'<hr>' +
                     					'</div>' +
                   					'</div>' 
@@ -86,7 +87,7 @@ $(document).ready(function(){
                     						'<h3>' + song.TITLE + '</h3>' +
                     						'<h4>By ' + song.ARTIST + '</h4>' +
                     						'<h6>' + song.TITLE + ' composed by '+ song.COMPOSER + ' from the album ' + song.ALBUM +'.</h6>' +
-                    						// '<h6>Download: <a target="_blank" href="https://s3.amazonaws.com/inf551-project/Songs-II/01+-++' + url + '.mp3">'+ song.TITLE +'</a></h6>' +  
+                    						'<h6>Download: <a target="_blank" href="' + song.URL + '">'+ song.TITLE +'</a></h6>' +
                     						'<hr>' +
                   					'</div>' +
                 					'</div>' 
