@@ -5,7 +5,15 @@ from pymongo import MongoClient
 
 @view_config(route_name='home', renderer='templates/layout.jinja2')
 def my_view(request):
-	# cur = request.db['users'].find()
+	return {'project': 'inf551'}
+
+@view_config(route_name='contact', renderer='templates/contact.jinja2')
+def contact(request):
+	return {'project': 'inf551'}
+
+
+@view_config(route_name='aboutus', renderer='templates/aboutus.jinja2')
+def aboutus(request):
 	return {'project': 'inf551'}
 
 @view_config(route_name='search', request_method='GET', renderer='json')
@@ -32,7 +40,7 @@ def search(request):
 		else:
 			search_song = query_dict['key']
 
-			cur = db.records.find({'$or': [{'ALBUM': {'$regex': ".*" + search_song + ".*", '$options': 'i'}}, {'TITLE': {'$regex': ".*" + search_song + ".*", '$options': 'i'}}, {'ARTIST': {'$regex': ".*" + search_song + ".*", '$options': 'i'}}, {'COMPOSER': {'$regex': ".*" + search_song + ".*", '$options': 'i'}}]}, {'_id':0})
+			cur = db.records.find({'$or': [{'ALBUM': {'$regex': ".*" + search_song + ".*", '$options': 'i'}}, {'TITLE': {'$regex': ".*" + search_song + ".*", '$options': 'i'}}, {'DATE': {'$regex': ".*" + search_song + ".*", '$options': 'i'}}, {'ARTIST': {'$regex': ".*" + search_song + ".*", '$options': 'i'}}, {'COMPOSER': {'$regex': ".*" + search_song + ".*", '$options': 'i'}}]}, {'_id':0})
 			songs = [x for x in cur]
 			cur.close()
 

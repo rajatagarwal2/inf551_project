@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{request.locale_name}}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pyramid web application">
+    <meta name="author" content="Pylons Project">
+
+    <title>Music Search</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!--     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+ -->    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{request.static_url('inf551:static/main.js')}}"></script>
+
+    <!-- Custom styles for this scaffold -->
+    <link href="{{request.static_url('inf551:static/theme.css')}}" rel="stylesheet">
+
+    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" integrity="sha384-f1r2UzjsxZ9T4V1f2zBO/evUqSEOpeaUUZcMTz1Up63bl4ruYnFYeM+BxI4NhyI0" crossorigin="anonymous"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="main-navigation">
+<!--           <div class="navbar-header animated fadeInUp">
+              <a class="navbar-brand" href="#"><img id="nav_image" src="{{request.static_url('inf551:static/logo.png')}}"></a>
+          </div> -->
+          <ul class="nav-list">
+              <li class="nav-list-item" style="margin-top: 0">
+                  <a href="#" class="nav-link" style="padding: 0;"><img id="nav_image" src="{{request.static_url('inf551:static/logo2.png')}}"></a>
+              </li>
+              <li class="nav-list-item" style="float: right;margin-right: 48px;">
+                <a href="http://localhost:6543/contact" class="nav-link">Contact</a>
+              </li>
+              <li class="nav-list-item" style="float: right">
+                  <a href="http://localhost:6543/aboutus" class="nav-link">About Us</a>
+              </li>
+              <li class="nav-list-item" style="float: right">
+                  <a href="http://localhost:6543/" class="nav-link">Home</a>
+              </li>
+          </ul>
+      </nav>
+      <div class="container" style="margin-left: 2px;max-width: 1434px;">
+        <h2 style="text-align: center;padding-top: 22px;">About Us</h2>
+        <h3 style="color: green;text-align: center;padding-top: 23px;font-family: cursive;">Download Music By Just One Click!</h3>
+        <div class="row" style="text-align: center;padding-top: 93px;">
+          <div class="col-md-8 col-md-offset-2">
+            <p style="font-size: 20px;">Our mission is to build the most comprehensive database of searchable music. Music Search the ultimate music search tool because it is powered by just one click search. Type to instantly find your favorite music and download it.</p>
+            <br>
+            <p style="font-size: 20px;">Not sure about the title of the song? No Problem, You can type just a word or two and can find your song.</p>
+          </div>
+        </div>
+        <h3 style="color: green;text-align: center;padding-top: 23px;font-family: cursive;">Give it a try. It's truly amazing!</h3>
+      </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script>
+    <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script>
+  </body>
+</html>
